@@ -10475,6 +10475,38 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
+sh_binary {
+    name: "init.kernel.post_boot-cape",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.kernel.post_boot-cape.sh",
+    filename: "init.kernel.post_boot-cape.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.kernel.post_boot.sh",
+    filename: "init.kernel.post_boot.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.qti.kernel.sh",
+    filename: "init.qti.kernel.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qti.write",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.qti.write.sh",
+    filename: "init.qti.write.sh",
+    soc_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "ipacm",
     owner: "xiaomi",
@@ -10561,6 +10593,33 @@ cc_prebuilt_binary {
                 "libqmi_cci",
                 "libqmi_common_so",
                 "libdiag",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "msm_irqbalance",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/msm_irqbalance",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -11024,6 +11083,14 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "vendor_modprobe",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/vendor_modprobe.sh",
+    filename: "vendor_modprobe.sh",
     soc_specific: true,
 }
 
