@@ -140,8 +140,14 @@ PRODUCT_PACKAGES += \
     libq3dtools_esx \
     vulkan.adreno \
     libadreno_utils \
+    libgralloc.qti \
     libgsl \
     libllvm-glnext \
+    vendor.qti.hardware.display.mapper@2.0 \
+    vendor.qti.hardware.display.mapper@3.0 \
+    vendor.qti.hardware.display.mapper@4.0 \
+    vendor.qti.hardware.display.mapperextensions@1.0 \
+    vendor.qti.hardware.display.mapperextensions@1.1 \
     android.frameworks.sensorservice@1.0_vendor \
     com.dsi.ant@1.0 \
     android.hardware.gnss-aidl-impl-qti \
@@ -159,12 +165,16 @@ PRODUCT_PACKAGES += \
     libar-gsl \
     libats \
     libcdfw_remote_api \
+    libcld80211 \
     libcneapiclient \
     libconfigdb \
     libdiag \
+    libdisplayconfig.qti \
     libdrmfs \
     libdsi_netctrl \
     libdsutils \
+    libgps.utils \
+    libgrallocutils \
     libidl \
     libizat_core \
     libjson \
@@ -175,8 +185,10 @@ PRODUCT_PACKAGES += \
     liblbs_core \
     libloc_api_v02 \
     libloc_base_util \
+    libloc_core \
     libloc_mq_client \
     libloc_util \
+    liblocation_api \
     liblx-ar_util \
     liblx-osal \
     libmdmdetect \
@@ -215,6 +227,7 @@ PRODUCT_PACKAGES += \
     libqcrilNrLogger \
     libqcrilNrQtiBus \
     libqcrilNrQtiMutex \
+    libqdMetaData \
     libqdi \
     libqmi \
     libqmi_cci \
@@ -227,6 +240,7 @@ PRODUCT_PACKAGES += \
     libqmiservices \
     libqrtr \
     libqsocket \
+    libqti_vndfwk_detect \
     libqti_vndfwk_detect_vendor \
     libqtiidentitycredential \
     libqtikeymint \
@@ -234,6 +248,7 @@ PRODUCT_PACKAGES += \
     libril-db \
     libril-legacy \
     librilqmimiscservices \
+    librmnetctl \
     libsensorndkbridge \
     libsensorslog \
     libsns_direct_channel_stub \
@@ -262,15 +277,23 @@ PRODUCT_PACKAGES += \
     qtiwakelock \
     sensors.ssc \
     sensors.touch.detect \
+    vendor.display.config@2.0 \
     vendor.qti.data.factory@2.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.btconfigstore@2.0 \
+    vendor.qti.hardware.camera.aon@1.0 \
+    vendor.qti.hardware.camera.postproc@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
     vendor.qti.hardware.data.cne.internal.server@1.0 \
     vendor.qti.hardware.data.dynamicdds@1.0 \
     vendor.qti.hardware.data.qmi@1.0 \
+    vendor.qti.hardware.display.allocator@4.0 \
+    vendor.qti.hardware.display.config-V2-ndk_platform \
     vendor.qti.hardware.dsp@1.0 \
+    vendor.qti.hardware.fm@1.0 \
     vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.qccsyshal@1.1 \
     vendor.qti.hardware.qseecom@1.0 \
