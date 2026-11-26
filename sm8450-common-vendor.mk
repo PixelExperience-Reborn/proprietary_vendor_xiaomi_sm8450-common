@@ -139,12 +139,9 @@ PRODUCT_PACKAGES += \
     libq3dtools_adreno \
     libq3dtools_esx \
     vulkan.adreno \
-    libEGL_adreno \
-    libGLESv2_adreno \
     libadreno_utils \
     libgsl \
     libllvm-glnext \
-    libq3dtools_adreno \
     android.frameworks.sensorservice@1.0 \
     com.dsi.ant@1.0 \
     android.hardware.gnss-aidl-impl-qti \
@@ -355,3 +352,11 @@ PRODUCT_PACKAGES += \
     thermal-engine-v2 \
     time_daemon \
     xtra-daemon
+
+PRODUCT_PACKAGES += \
+    vendor_lib_libEGL_adreno_so \
+    vendor_lib_libGLESv2_adreno_so \
+    vendor_lib_libq3dtools_adreno_so \
+    vendor_lib64_libEGL_adreno_so \
+    vendor_lib64_libGLESv2_adreno_so \
+    vendor_lib64_libq3dtools_adreno_so
