@@ -10476,6 +10476,14 @@ cc_prebuilt_binary {
 }
 
 sh_binary {
+    name: "init.class_main",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.class_main.sh",
+    filename: "init.class_main.sh",
+    soc_specific: true,
+}
+
+sh_binary {
     name: "init.kernel.post_boot-cape",
     owner: "xiaomi",
     src: "proprietary/vendor/bin/init.kernel.post_boot-cape.sh",
@@ -10492,10 +10500,42 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.qcom.class_core",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.qcom.class_core.sh",
+    filename: "init.qcom.class_core.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qcom.early_boot",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.qcom.early_boot.sh",
+    filename: "init.qcom.early_boot.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qcom.sensors",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.qcom.sensors.sh",
+    filename: "init.qcom.sensors.sh",
+    soc_specific: true,
+}
+
+sh_binary {
     name: "init.qti.kernel",
     owner: "xiaomi",
     src: "proprietary/vendor/bin/init.qti.kernel.sh",
     filename: "init.qti.kernel.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qti.media",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.qti.media.sh",
+    filename: "init.qti.media.sh",
     soc_specific: true,
 }
 
@@ -10684,6 +10724,33 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "nv_mac",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/nv_mac",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libqmi_cci",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "pd-mapper",
     owner: "xiaomi",
     target: {
@@ -10700,6 +10767,68 @@ cc_prebuilt_binary {
                 "libqmi_common_so",
                 "libqmi_encdec",
                 "libqmi_csi",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "pm-proxy",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/pm-proxy",
+            ],
+            shared_libs: [
+                "libperipheral_client",
+                "libcutils",
+                "liblog",
+                "libmdmdetect",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "pm-service",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/pm-service",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libbinder",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libqmi_encdec",
+                "libqmi_csi",
+                "libmdmdetect",
+                "libperipheral_client",
                 "libc++",
                 "libc",
                 "libm",
@@ -10899,6 +11028,37 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "sensors.qti",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/sensors.qti",
+            ],
+            shared_libs: [
+                "libprotobuf-cpp-lite-3.9.1",
+                "liblog",
+                "libdiag",
+                "libssc",
+                "libsensorslog",
+                "libcutils",
+                "libsnsapi",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "slim_daemon",
     owner: "xiaomi",
     target: {
@@ -10987,6 +11147,34 @@ cc_prebuilt_binary {
                 "libqmi_cci",
                 "libdsi_netctrl",
                 "libqrtr",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "ssr_setup",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/ssr_setup",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libmdmdetect",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
