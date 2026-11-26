@@ -23,8 +23,13 @@ into this directory and refuses any file whose hash differs from the list.
 Method, exclusions and compatibility evidence:
 `device/xiaomi/sm8450-common/docs/PROPRIETARY_FILES.md`.
 
-## Status
+## Build rules
 
-Build rules (Soong/Make for the prebuilts), VINTF and SELinux are not yet
-added and require validation in an AOSP 17 tree. This repository does not
-indicate build or device readiness.
+`Android.bp`, `Android.mk`, `sm8450-common-vendor.mk` and `BoardConfigVendor.mk`
+are generated from the device's `proprietary-files.txt` by
+`device/xiaomi/sm8450-common/setup-makefiles.py` (the organization's
+`tools/extract-utils`), after `tools/extract_proprietary.py` has
+reproduced the files from the OTA and applied the declared fixups (the
+Android 12 `android.*-ndk_platform` library names become the Android 17
+`-ndk` names). Regenerate them whenever a list changes; never edit them
+by hand.
