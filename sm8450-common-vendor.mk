@@ -216,12 +216,18 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapperextensions@1.2 \
     android.hardware.secure_element@1.0-impl \
     com.dsi.ant@1.0 \
+    android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.boot@1.0-impl-1.2-qti \
+    android.hardware.gatekeeper@1.0-impl-qti \
     android.hardware.gnss-aidl-impl-qti \
+    android.hardware.gnss@2.1-impl-qti \
     audio.primary.taro \
     gyro_fusion_interface \
     sound_trigger.primary.taro \
     vendor.qti.esepowermanager@1.1-impl \
+    vendor.qti.hardware.btconfigstore@2.0-impl \
+    vendor.qti.hardware.capabilityconfigstore@1.0-impl \
+    vendor.qti.hardware.servicetracker@1.2-impl \
     jcos_nq_client \
     lib-imscommon \
     lib-imsdpl \
@@ -243,6 +249,7 @@ PRODUCT_PACKAGES += \
     libaudiocloudctrl \
     libaudioroute_ext \
     libboot_control_qti \
+    libbtnv \
     libcdfw_remote_api \
     libchrome_vendor \
     libcld80211 \
