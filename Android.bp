@@ -532,7 +532,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.frameworks.sensorservice@1.0",
+    name: "android.frameworks.sensorservice@1.0_vendor",
+    stem: "android.frameworks.sensorservice@1.0",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -1318,7 +1319,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeymaster_messages",
+    name: "libkeymaster_messages_vendor",
+    stem: "libkeymaster_messages",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -3227,7 +3229,7 @@ cc_prebuilt_library_shared {
                 "libkeymasterdeviceutils",
                 "libbase",
                 "libqcbor",
-                "libkeymaster_messages",
+                "libkeymaster_messages_vendor",
                 "android.hardware.keymaster@4.0",
                 "android.hardware.keymaster@4.1",
                 "android.hardware.security.keymint-V1-ndk",
@@ -3376,7 +3378,7 @@ cc_prebuilt_library_shared {
                 "libbase",
                 "libhidlbase",
                 "libutils",
-                "android.frameworks.sensorservice@1.0",
+                "android.frameworks.sensorservice@1.0_vendor",
                 "android.hardware.sensors@1.0",
                 "libc++",
                 "libc",
@@ -6783,7 +6785,7 @@ cc_prebuilt_binary {
                 "libhidlbase",
                 "libsensorndkbridge",
                 "android.hardware.sensors@1.0",
-                "android.frameworks.sensorservice@1.0",
+                "android.frameworks.sensorservice@1.0_vendor",
                 "libloc_api_v02",
                 "libloc_core",
                 "liblbs_core",

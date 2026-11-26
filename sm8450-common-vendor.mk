@@ -142,7 +142,7 @@ PRODUCT_PACKAGES += \
     libadreno_utils \
     libgsl \
     libllvm-glnext \
-    android.frameworks.sensorservice@1.0 \
+    android.frameworks.sensorservice@1.0_vendor \
     com.dsi.ant@1.0 \
     android.hardware.gnss-aidl-impl-qti \
     lib-imscommon \
@@ -168,7 +168,7 @@ PRODUCT_PACKAGES += \
     libidl \
     libizat_core \
     libjson \
-    libkeymaster_messages \
+    libkeymaster_messages_vendor \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
