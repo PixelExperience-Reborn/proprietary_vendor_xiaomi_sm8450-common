@@ -828,36 +828,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.frameworks.sensorservice@1.0_vendor",
-    stem: "android.frameworks.sensorservice@1.0",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/android.frameworks.sensorservice@1.0.so",
-            ],
-            shared_libs: [
-                "android.hardware.sensors@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "com.dsi.ant@1.0",
     owner: "xiaomi",
     strip: {
@@ -3927,7 +3897,7 @@ cc_prebuilt_library_shared {
                 "libbase",
                 "libhidlbase",
                 "libutils",
-                "android.frameworks.sensorservice@1.0_vendor",
+                "android.frameworks.sensorservice@1.0",
                 "android.hardware.sensors@1.0",
                 "libc++",
                 "libc",
@@ -7561,7 +7531,7 @@ cc_prebuilt_binary {
                 "libhidlbase",
                 "libsensorndkbridge",
                 "android.hardware.sensors@1.0",
-                "android.frameworks.sensorservice@1.0_vendor",
+                "android.frameworks.sensorservice@1.0",
                 "libloc_api_v02",
                 "libloc_core",
                 "liblbs_core",

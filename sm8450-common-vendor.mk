@@ -148,7 +148,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@4.0 \
     vendor.qti.hardware.display.mapperextensions@1.0 \
     vendor.qti.hardware.display.mapperextensions@1.1 \
-    android.frameworks.sensorservice@1.0_vendor \
     com.dsi.ant@1.0 \
     android.hardware.gnss-aidl-impl-qti \
     lib-imscommon \
