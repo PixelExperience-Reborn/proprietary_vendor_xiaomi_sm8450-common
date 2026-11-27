@@ -204,13 +204,19 @@ PRODUCT_PACKAGES += \
     libq3dtools_esx \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vulkan.adreno \
+    libCB \
+    libOpenCL \
     libadreno_app_profiles \
     libadreno_utils \
+    libcamxexternalformatutils \
     libgralloc.qti \
     libgralloccore \
     libgrallocutils \
     libgsl \
+    libkcl \
+    libkernelmanager \
     libllvm-glnext \
+    libllvm-qcom \
     libllvm-qgl \
     libqdMetaData \
     libvmmem \
@@ -221,12 +227,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapperextensions@1.1 \
     vendor.qti.hardware.display.mapperextensions@1.2 \
     vendor.qti.qspmhal@1.0 \
-    libCB \
-    libOpenCL \
-    libcamxexternalformatutils \
-    libkcl \
-    libkernelmanager \
-    libllvm-qcom \
     android.hardware.secure_element@1.0-impl \
     btaudio_offload_if \
     com.dsi.ant@1.0 \
