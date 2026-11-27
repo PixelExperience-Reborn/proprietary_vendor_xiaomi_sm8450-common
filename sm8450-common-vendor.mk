@@ -190,7 +190,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/firmware/vpu20_4v.b18:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b18 \
     vendor/xiaomi/sm8450-common/proprietary/vendor/firmware/vpu20_4v.b19:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b19 \
     vendor/xiaomi/sm8450-common/proprietary/vendor/firmware/vpu20_4v.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.mbn \
-    vendor/xiaomi/sm8450-common/proprietary/vendor/firmware/vpu20_4v.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.mdt
+    vendor/xiaomi/sm8450-common/proprietary/vendor/firmware/vpu20_4v.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.mdt \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/gpu/kbc/sequence_manifest.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/sequence_manifest.bin \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/gpu/kbc/unified_kbcs_32.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_32.bin \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/gpu/kbc/unified_kbcs_64.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_64.bin \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/gpu/kbc/unified_ksqs.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_ksqs.bin
 
 PRODUCT_PACKAGES += \
     eglSubDriverAndroid \
@@ -613,6 +617,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.memory.pasrmanager@1.1 \
     vendor.xiaomi.hardware.displayfeature@1.0 \
     vendor.xiaomi.hardware.mtdservice@1.0 \
+    TimeService \
     adpl \
     adsprpcd \
     audioadsprpcd \

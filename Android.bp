@@ -13298,6 +13298,18 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
+android_app_import {
+    name: "TimeService",
+    owner: "xiaomi",
+    apk: "proprietary/vendor/app/TimeService/TimeService.apk",
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    soc_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "adpl",
     owner: "xiaomi",
