@@ -13632,7 +13632,8 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.boot@1.2-service",
+    name: "android.hardware.boot@1.2-service_vendor",
+    stem: "android.hardware.boot@1.2-service",
     owner: "xiaomi",
     target: {
         android_arm64: {
@@ -13848,7 +13849,8 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.sensors@2.1-service.multihal",
+    name: "android.hardware.sensors@2.1-service.multihal_vendor",
+    stem: "android.hardware.sensors@2.1-service.multihal",
     owner: "xiaomi",
     target: {
         android_arm64: {

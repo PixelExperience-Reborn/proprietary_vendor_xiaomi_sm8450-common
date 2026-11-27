@@ -626,13 +626,13 @@ PRODUCT_PACKAGES += \
     dspservice \
     edgnss-daemon \
     android.hardware.bluetooth@1.0-service-qti \
-    android.hardware.boot@1.2-service \
+    android.hardware.boot@1.2-service_vendor \
     android.hardware.drm@1.4-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
     android.hardware.gnss-aidl-service-qti \
     android.hardware.identity-service-qti \
     android.hardware.security.keymint-service-qti \
-    android.hardware.sensors@2.1-service.multihal \
+    android.hardware.sensors@2.1-service.multihal_vendor \
     android.hardware.thermal@2.0-service.qti-v2 \
     android.hardware.usb@1.2-service-qti \
     android.hardware.wifi@1.0-service \
