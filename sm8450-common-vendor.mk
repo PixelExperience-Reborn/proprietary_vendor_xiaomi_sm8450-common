@@ -295,6 +295,7 @@ PRODUCT_PACKAGES += \
     libcdfw \
     libcdfw_remote_api \
     libcdsp_default_listener \
+    libcdsprpc \
     libchrome_vendor \
     libcld80211 \
     libcneapiclient \
@@ -358,6 +359,7 @@ PRODUCT_PACKAGES += \
     libmeters \
     libminkdescriptor \
     libminksocket_vendor \
+    libmisight \
     libmmhardware \
     libnetmgr \
     libnetmgr_common \
@@ -472,7 +474,9 @@ PRODUCT_PACKAGES += \
     libsys_info_cache \
     libsystem_health_mon \
     libtestutils \
+    libthermalclient \
     libtime_genoff \
+    libtinyxml2_1 \
     libtrustedapploader \
     libultrasound_notify \
     libvideotxr \
@@ -615,6 +619,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.memory.pasrmanager@1.0 \
     vendor.qti.memory.pasrmanager@1.1 \
     vendor.xiaomi.hardware.displayfeature@1.0 \
+    vendor.xiaomi.hardware.mtdservice@1.0 \
     adpl \
     adsprpcd \
     audioadsprpcd \
