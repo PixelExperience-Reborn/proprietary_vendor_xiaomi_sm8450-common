@@ -29,13 +29,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/display/thermallevel_to_fps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/thermallevel_to_fps.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
-    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/android.hardware.boot@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.boot@1.2-service.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-aidl-service-qti.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/android.hardware.identity-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.identity-service-qti.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/android.hardware.security.keymint-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service-qti.rc \
-    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/android.hardware.sensors@2.1-service-multihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors@2.1-service-multihal.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/android.hardware.usb@1.2-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.2-service-qti.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/android.hardware.wifi@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service.rc \
@@ -626,13 +624,11 @@ PRODUCT_PACKAGES += \
     dspservice \
     edgnss-daemon \
     android.hardware.bluetooth@1.0-service-qti \
-    android.hardware.boot@1.2-service_vendor \
     android.hardware.drm@1.4-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
     android.hardware.gnss-aidl-service-qti \
     android.hardware.identity-service-qti \
     android.hardware.security.keymint-service-qti \
-    android.hardware.sensors@2.1-service.multihal_vendor \
     android.hardware.thermal@2.0-service.qti-v2 \
     android.hardware.usb@1.2-service-qti \
     android.hardware.wifi@1.0-service \
