@@ -44,9 +44,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/hw/init.qti.kernel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qti.kernel.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/imsdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdaemon.rc \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/init.qti.display_boot.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.display_boot.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/init.qti.qcv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.qcv.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/ipa_fws.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipa_fws.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/ipacm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipacm.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/loc-launcher.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/loc-launcher.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/memtrack_qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack_qti.rc \
@@ -58,6 +61,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.audio-adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.audio-adsprpc-service.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.esepowermanager@1.1-service.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.hardware.AGMIPC@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.AGMIPC@1.0-service.rc \
@@ -200,12 +204,14 @@ PRODUCT_PACKAGES += \
     libq3dtools_esx \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vulkan.adreno \
+    libadreno_app_profiles \
     libadreno_utils \
     libgralloc.qti \
     libgralloccore \
     libgrallocutils \
     libgsl \
     libllvm-glnext \
+    libllvm-qgl \
     libqdMetaData \
     libvmmem \
     vendor.qti.hardware.display.mapper@2.0 \
@@ -214,8 +220,24 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapperextensions@1.0 \
     vendor.qti.hardware.display.mapperextensions@1.1 \
     vendor.qti.hardware.display.mapperextensions@1.2 \
+    vendor.qti.qspmhal@1.0 \
+    libCB \
+    libOpenCL \
+    libcamxexternalformatutils \
+    libkcl \
+    libkernelmanager \
+    libllvm-qcom \
     android.hardware.secure_element@1.0-impl \
+    btaudio_offload_if \
     com.dsi.ant@1.0 \
+    com.qualcomm.qti.imscmservice@2.0 \
+    com.qualcomm.qti.imscmservice@2.1 \
+    com.qualcomm.qti.imscmservice@2.2 \
+    com.qualcomm.qti.uceservice@2.0 \
+    com.qualcomm.qti.uceservice@2.1 \
+    com.qualcomm.qti.uceservice@2.2 \
+    com.qualcomm.qti.uceservice@2.3 \
+    deviceInfoServiceModuleNr \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.boot@1.0-impl-1.2-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
@@ -231,15 +253,27 @@ PRODUCT_PACKAGES += \
     jcos_nq_client \
     lib-imscommon \
     lib-imsdpl \
+    lib-imsqimf \
+    lib-imsrcsservice \
+    lib-imsservice \
     lib-imsvtcore \
+    lib-imsxml \
     lib-rtpcommon \
     lib-rtpcore \
     lib-rtpsl \
+    libGPTEE_vendor \
+    libGPreqcancel \
+    libGPreqcancel_svc \
+    libMiVDR \
     libQSEEComAPI \
+    libQTEEConnector_listener \
     libQtiRilLoadable \
+    libadm \
+    libadsp_default_listener \
     libadsprpc \
     libagm \
     libagmclient \
+    libagmmixer \
     libar-acdb \
     libar-gpr \
     libar-gsl \
@@ -248,22 +282,45 @@ PRODUCT_PACKAGES += \
     libaudio_log_utils \
     libaudiocloudctrl \
     libaudioroute_ext \
+    libawcal \
+    libbacklight-calib \
+    libbatching \
+    libbatterylistener \
+    libbluetooth_audio_session \
+    libbluetooth_audio_session_qti \
+    libbluetooth_audio_session_qti_2_1 \
     libboot_control_qti \
     libbtnv \
+    libcacertclient \
+    libcdfw \
     libcdfw_remote_api \
+    libcdsp_default_listener \
     libchrome_vendor \
     libcld80211 \
     libcneapiclient \
     libconfigdb \
+    libcpion \
+    libdataitems \
     libdiag \
+    libdigital-dimming \
+    libdisp-aba \
     libdisplayconfig.qti \
     libdisplaydebug \
+    libdisplayqos \
+    libdisplayskuutils \
+    libdpps \
     libdrmfs \
+    libdrmtime \
     libdrmutils \
     libdsi_netctrl \
     libdsutils \
+    libgeofencing \
+    libgnss \
+    libgnsspps \
     libgps.utils \
     libgpu_tonemapper \
+    libhdr_backlight_adapter \
+    libhdr_tm \
     libhistogram \
     libidl \
     libipanat \
@@ -274,33 +331,55 @@ PRODUCT_PACKAGES += \
     libkeymasterprovision \
     libkeymasterutils \
     liblbs_core \
+    liblearningmodule \
     liblistensoundmodel2vendor \
     libloc_api_v02 \
+    libloc_api_wds \
     libloc_base_util \
     libloc_core \
+    libloc_eng_hub \
     libloc_mq_client \
+    libloc_ril_client \
+    libloc_socket \
     libloc_util \
     liblocation_api \
+    liblocationservice \
+    liblocationservice_glue \
+    liblocdiagiface \
+    liblowi_client \
+    liblowi_common \
+    liblowi_wifihal \
     liblx-ar_util \
     liblx-osal \
+    libmcs \
     libmdmdetect \
+    libmemperfd \
+    libmemutils \
+    libmeters \
     libminkdescriptor \
     libminksocket_vendor \
+    libmmhardware \
     libnetmgr \
     libnetmgr_common \
     libnetmgr_datapath_proxy \
+    libnetmgr_nr_fusion \
+    libnetmgr_rmnet_ext \
     libnetmgr_sscm3 \
     libnetmgr_utils \
+    libnetmgrext_interface_server \
     libnetmgrmodemproxy \
     libnetmgrportutils \
     libnetmgrxfrmutils \
     libnlnetmgr \
+    liboemcrypto \
     liboffloadhal \
+    libops \
     libpal_net_if \
     libpdmapper \
     libpdnotifier \
     libperfconfig \
     libperfgluelayer \
+    libperfioctl \
     libperipheral_client \
     libprotobuf-cpp-full-3.9.1 \
     libprotobuf-cpp-lite-3.9.1 \
@@ -318,13 +397,25 @@ PRODUCT_PACKAGES += \
     libqcodec2_platform \
     libqcodec2_utils \
     libqcodec2_v4l2codec \
+    libqcrilDataModule \
     libqcrilNr \
+    libqcrilNrCellInfoModule \
     libqcrilNrFramework \
+    libqcrilNrImsModule \
     libqcrilNrLogger \
+    libqcrilNrPbmModule \
     libqcrilNrQtiBus \
     libqcrilNrQtiMutex \
+    libqcrilNrSmsModule \
+    libqcrilNrSocketModule \
+    libqcrilNrVoiceModule \
+    libqcrildataaidl \
+    libqcrildatactl \
+    libqcrildataqos \
     libqdi \
+    libqdpr \
     libqdutils \
+    libqisl \
     libqmi \
     libqmi_cci \
     libqmi_client_helper \
@@ -335,48 +426,69 @@ PRODUCT_PACKAGES += \
     libqmi_legacy \
     libqmiservices \
     libqrtr \
+    libqrtrclient \
+    libqseed3 \
     libqservice \
     libqsocket \
     libqti-perfd-client \
+    libqti-perfd \
     libqti-util \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect_vendor \
+    libqtigefar \
     libqtiidentitycredential \
     libqtikeymint \
     librcc \
+    librcmask \
     librecovery_updater \
     libresampler \
     libril-db \
     libril-legacy \
     librilqmimiscservices \
     librmnetctl \
+    librpmb \
     libsdedrm \
+    libsdm-color \
+    libsdm-colormgr-algo \
     libsdm-disp-vndapis \
     libsdmcore \
+    libsdmextension \
     libsdmutils \
+    libsdsprpc \
     libsensorndkbridge \
     libsensorslog \
+    libskewknob \
+    libsnapdragoncolor-manager \
     libsns_direct_channel_stub \
     libsnsapi \
     libsnsdiaglog \
     libsoc_helper \
     libspcom \
+    libspl \
     libssc \
+    libssc_default_listener \
+    libssd \
+    libsynergy_loc_api \
     libsys_info_cache \
     libsystem_health_mon \
+    libtestutils \
     libtime_genoff \
+    libtrustedapploader \
     libultrasound_notify \
     libvideotxr \
+    libwifi-hal-ctrl \
     libwifi-hal \
     libwpa_client \
     libwvhidl \
     libxiaomi_qcril \
     libxlog \
     libxml \
+    libxtadapter \
     ls_nq_client \
     qcrilInterfaces \
     qcrilMarshal \
     qcrilNrQmiModule \
+    qcril_client \
     qcrild_libqcrilnr \
     qcrild_libqcrilnrutils \
     qti.video.utils.videobufferlayout \
@@ -409,17 +521,27 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.AGMIPC@1.0 \
     vendor.qti.hardware.ListenSoundModel@1.0-impl \
     vendor.qti.hardware.ListenSoundModel@1.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.bluetooth_audio@2.1 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
     vendor.qti.hardware.btconfigstore@1.0 \
     vendor.qti.hardware.btconfigstore@2.0 \
+    vendor.qti.hardware.cacert@1.0 \
     vendor.qti.hardware.camera.aon@1.0 \
     vendor.qti.hardware.camera.postproc@1.0 \
     vendor.qti.hardware.capabilityconfigstore@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
     vendor.qti.hardware.data.cne.internal.server@1.0 \
+    vendor.qti.hardware.data.connection@1.0 \
+    vendor.qti.hardware.data.connection@1.1 \
+    vendor.qti.hardware.data.connectionfactory-V1-ndk_platform \
+    vendor.qti.hardware.data.dataactivity-V1-ndk_platform \
     vendor.qti.hardware.data.dynamicdds@1.0 \
+    vendor.qti.hardware.data.iwlan@1.0 \
+    vendor.qti.hardware.data.iwlan@1.1 \
+    vendor.qti.hardware.data.ka-V1-ndk_platform \
     vendor.qti.hardware.data.qmi@1.0 \
     vendor.qti.hardware.display.allocator@3.0 \
     vendor.qti.hardware.display.allocator@4.0 \
@@ -444,6 +566,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qteeconnector@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
     vendor.qti.hardware.radio.ims-V7-ndk_platform \
+    vendor.qti.hardware.radio.internal.deviceinfo@1.0 \
     vendor.qti.hardware.radio.lpa@1.0 \
     vendor.qti.hardware.radio.lpa@1.1 \
     vendor.qti.hardware.radio.lpa@1.2 \
@@ -468,6 +591,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.1 \
     vendor.qti.hardware.servicetracker@1.2 \
     vendor.qti.ims.callcapability@1.0 \
+    vendor.qti.ims.callinfo@1.0 \
     vendor.qti.ims.configservice@1.0 \
     vendor.qti.ims.configservice@1.1 \
     vendor.qti.ims.connection@1.0 \
@@ -488,9 +612,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.imsrtpservice@3.0-service-Impl \
     vendor.qti.imsrtpservice@3.0 \
     vendor.qti.latency@2.0 \
+    vendor.qti.memory.pasrmanager@1.0 \
+    vendor.qti.memory.pasrmanager@1.1 \
     vendor.xiaomi.hardware.displayfeature@1.0 \
     adpl \
     adsprpcd \
+    audioadsprpcd \
     cdsprpcd \
     cnss-daemon \
     dspservice \
@@ -530,8 +657,10 @@ PRODUCT_PACKAGES += \
     init.qcom.class_core \
     init.qcom.early_boot \
     init.qcom.sensors \
+    init.qti.display_boot \
     init.qti.kernel \
     init.qti.media \
+    init.qti.qcv \
     init.qti.write \
     ipacm \
     loc_launcher \
