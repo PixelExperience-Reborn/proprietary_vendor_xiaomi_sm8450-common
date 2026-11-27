@@ -2314,7 +2314,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libutils",
-                "libchrome_vendor",
+                "libchrome",
                 "libhidlbase",
                 "libc++",
                 "libc",
@@ -3704,35 +3704,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libchrome_vendor",
-    stem: "libchrome",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libchrome.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libevent",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libcld80211",
     owner: "xiaomi",
     strip: {
@@ -4609,31 +4580,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libkeymaster_messages_vendor",
-    stem: "libkeymaster_messages",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libkeymaster_messages.so",
-            ],
-            shared_libs: [
                 "libc++",
                 "libc",
                 "libm",
@@ -8125,7 +8071,7 @@ cc_prebuilt_library_shared {
                 "libkeymasterdeviceutils",
                 "libbase",
                 "libqcbor",
-                "libkeymaster_messages_vendor",
+                "libkeymaster_messages",
                 "android.hardware.keymaster@4.0",
                 "android.hardware.keymaster@4.1",
                 "android.hardware.security.keymint-V1-ndk",
@@ -9535,7 +9481,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libutils",
-                "libchrome_vendor",
+                "libchrome",
                 "libhidlbase",
                 "se_nq_extn_client",
                 "libc++",
@@ -9860,7 +9806,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libutils",
-                "libchrome_vendor",
+                "libchrome",
                 "libhidlbase",
                 "libc++",
                 "libc",

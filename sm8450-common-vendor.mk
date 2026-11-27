@@ -296,7 +296,6 @@ PRODUCT_PACKAGES += \
     libcdfw_remote_api \
     libcdsp_default_listener \
     libcdsprpc \
-    libchrome_vendor \
     libcld80211 \
     libcneapiclient \
     libconfigdb \
@@ -327,7 +326,6 @@ PRODUCT_PACKAGES += \
     libipanat \
     libizat_core \
     libjson \
-    libkeymaster_messages_vendor \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
