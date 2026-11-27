@@ -1915,39 +1915,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.boot@1.0-impl-1.2-qti",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/android.hardware.boot@1.0-impl-1.2-qti.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libhidlbase",
-                "libhardware",
-                "libutils",
-                "android.hardware.boot@1.0",
-                "android.hardware.boot@1.1",
-                "android.hardware.boot@1.2",
-                "libboot_control_qti",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "android.hardware.gatekeeper@1.0-impl-qti",
     owner: "xiaomi",
     strip: {
@@ -3502,37 +3469,6 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libboot_control_qti",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libboot_control_qti.so",
-            ],
-            shared_libs: [
-                "android.hardware.boot@1.1",
-                "librecovery_updater",
-                "libbase",
-                "libcutils",
-                "liblog",
-                "libz",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-                "libbase_shim",
             ],
         },
     },
@@ -8134,34 +8070,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libdisplaydebug",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "librecovery_updater",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/librecovery_updater.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libion",
-                "liblog",
-                "libz",
                 "libc++",
                 "libc",
                 "libm",

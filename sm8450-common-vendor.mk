@@ -237,7 +237,6 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.3 \
     deviceInfoServiceModuleNr \
     android.hardware.bluetooth@1.0-impl-qti \
-    android.hardware.boot@1.0-impl-1.2-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
     android.hardware.gnss-aidl-impl-qti \
     android.hardware.gnss@2.1-impl-qti \
@@ -287,7 +286,6 @@ PRODUCT_PACKAGES += \
     libbluetooth_audio_session \
     libbluetooth_audio_session_qti \
     libbluetooth_audio_session_qti_2_1 \
-    libboot_control_qti \
     libbtnv \
     libcacertclient \
     libcdfw \
@@ -438,7 +436,6 @@ PRODUCT_PACKAGES += \
     libqtikeymint \
     librcc \
     librcmask \
-    librecovery_updater \
     libresampler \
     libril-db \
     libril-legacy \
